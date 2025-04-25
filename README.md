@@ -22,6 +22,12 @@ API RESTful desenvolvida em 2025 por Joao Vitor Ferreira
 - InMemory Database (ou SQLite/PostgreSQL/SQL Server)
 - Swagger
 
+## Utilização do react para front.
+- O código acima é um exemplo de um componente React que busca e exibe uma lista de pedidos de uma API.
+- Ele utiliza o hook useEffect para fazer a requisição quando o componente é montado e gerencia estados de carregamento e erro.
+
+para abrir ele: http://localhost:5189/api/Pedido 
+
 ## Como executar
 
 ```bash
