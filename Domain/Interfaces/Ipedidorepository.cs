@@ -1,0 +1,21 @@
+using LojaPedidosApi.Domain.Enums;
+
+namespace LojaPedidosApi.Domain.Entities
+{
+    public class PedidoNovo
+    {
+        public Guid Id { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public StatusPedido Status { get; set; }
+        public List<Produto> Produtos { get; set; }
+        public decimal ValorTotal => Produtos?.Sum(p => p.Preco) ?? 0;
+
+        public PedidoNovo()
+        {
+            Id = Guid.NewGuid();
+            DataCriacao = DateTime.Now;
+            Status = StatusPedido.Aberto;
+            Produtos = new List<Produto>();
+        }
+    }
+}
